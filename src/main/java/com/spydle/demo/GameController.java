@@ -23,7 +23,7 @@ public class GameController {
         // Simulate creating a new room with the provided nickname as the owner
         Room newRoom = new Room("New Room", nickname);
 
-        // edirect to room list after creating a room
+        // redirect to room list after creating a room
         return "redirect:/room-list";
     }
 
@@ -31,9 +31,9 @@ public class GameController {
     public String roomList(Model model) {
         // Sample list of rooms
         List<Room> rooms = Arrays.asList(
-                new Room("Room 1", "Owner1"),
-                new Room("Room 2", "Owner2"),
-                new Room("Room 3", "Owner3")
+                new Room("Room 1", "Kai"),
+                new Room("Room 2", "Xin Lei"),
+                new Room("Room 3", "Polyna")
         );
 
         model.addAttribute("rooms", rooms);
