@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Game Room</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="container">
+  <h1>Game Room - Room Code: <span th:text="${roomCode}"></span></h1>
+  <div>
+    <p>Assigned Substring: <span th:text="${assignedSubstring}"></span></p>
+    <form action="/submit-word" method="post">
+      <input type="text" name="word" placeholder="Enter your word" required>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <div>
+    <h2>Players</h2>
+    <ul>
+      <li th:each="player : ${players}">
+        <span th:text="${player.name}"></span> - Lives: <span th:text="${player.lives}"></span> - Points: <span th:text="${player.points}"></span>
+      </li>
+    </ul>
+  </div>
+  <p th:if="${gameOver}">Game Over! Winner: <span th:text="${winner}"></span></p>
+  <a href="/">Return to Welcome Page</a>
+</div>
+</body>
+</html>

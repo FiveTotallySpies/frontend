@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Available Rooms</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="container">
+  <h1>Available Rooms</h1>
+  <ul>
+    <li th:each="room : ${rooms}">
+      Room Code: <span th:text="${room.code}"></span> - Players: <span th:text="${room.playerCount}"></span>
+      <form action="/join-room" method="post">
+        <input type="hidden" name="roomCode" th:value="${room.code}">
+        <button type="submit">Join Room</button>
+      </form>
+    </li>
+  </ul>
+  <a href="/">Back to Welcome Page</a>
+</div>
+</body>
+</html>
