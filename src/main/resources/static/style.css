@@ -10,20 +10,28 @@ body {
     background-color: #c3d9ff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 h1, h2 {
     text-align: center;
     color: darkred;
 }
+
+.top-players-header {
+    margin-top: 30px; /* Increase distance between "Top Players" and podium */
+}
+
 form {
     margin-top: 10px;
     display: flex;
     flex-direction: column;
 }
+
 input[type="text"] {
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
 }
+
 button {
     padding: 10px;
     color: #fff;
@@ -31,8 +39,57 @@ button {
     background-color: blueviolet;
     cursor: pointer;
 }
+
 button:hover {
     background-color: white;
     border: 1px solid blueviolet;
     color: blueviolet;
+}
+
+/* Podium Styles */
+.podium {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px; /* Increased margin above podium */
+}
+
+.podium-spot {
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    margin: 0 20px; /* Horizontal space between podium spots */
+}
+
+/* Individual podium heights */
+.first {
+    background-color: gold;
+    font-size: 1.5em; /* Increased font size */
+    height: 120px; /* Adjust height as needed */
+    width: 100px; /* Width of the podium spot */
+    transform: translateY(-40px); /* Move the first place up */
+}
+
+.second {
+    background-color: silver;
+    font-size: 1.3em; /* Increased font size */
+    height: 100px; /* Adjust height as needed */
+    width: 100px; /* Width of the podium spot */
+    transform: translateY(-20px); /* Move the second place up */
+}
+
+.third {
+    background-color: #de8840;
+    font-size: 1.1em; /* Increased font size */
+    height: 80px; /* Adjust height as needed */
+    width: 100px; /* Width of the podium spot */
+}
+
+
+/* Style links */
+a {
+    color: purple; /* Make link text white */
+    text-decoration: none; /* Remove underline from links */
+    text-align: center; /* Center the link */
+    display: block; /* Make the link a block element for centering */
+    margin-top: 20px; /* Add margin above the link if needed */
 }
