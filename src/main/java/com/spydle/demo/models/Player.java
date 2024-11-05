@@ -1,12 +1,13 @@
 package com.spydle.demo.models;
 
 public class Player {
+    private int id;
     private String name;
     private int score;
 
     public Player(String name, int score) {
         this.name = name;
-        this.score = score;
+        this.score = 0;
     }
 
     public String getName() {

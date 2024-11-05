@@ -5,13 +5,13 @@ import java.util.List;
 
 public class Room {
     private String name;
-    private String owner;
+    private String owner; // Maybe just without owner and
     private List<Player> players; // List to hold players
-
+    // Fuck the owner, just list of player number 0.
     public Room(String name, String owner) {
         this.name = name;
         this.owner = owner;
-        this.players = new ArrayList<>(); // Initialize the player list
+        this.players = new ArrayList<>(); // Initialize the player list 4 players including the owner
     }
 
     public String getName() {
